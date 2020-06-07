@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 })
 
 export class ForceDirectedComponent implements AfterViewInit {
-    @ViewChild('inputText') textInput: ElementRef;
+    @ViewChild('inputText', { static: true }) textInput: ElementRef;
     // svg element groups
     private nodes: any;
     private links: any;

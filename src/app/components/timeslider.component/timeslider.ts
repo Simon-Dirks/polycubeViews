@@ -17,7 +17,7 @@ export class TimeSliderComponent implements AfterViewInit {
 
     @Output() onSelect: EventEmitter<Array<Date>>;
 
-    @ViewChild('timeSliderContainer') timeSlider: ElementRef;
+    @ViewChild('timeSliderContainer', { static: true }) timeSlider: ElementRef;
 
     // D3 things
     xScale: D3.ScaleLinear<any, any>;

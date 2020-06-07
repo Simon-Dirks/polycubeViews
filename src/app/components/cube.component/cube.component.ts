@@ -30,23 +30,23 @@ import * as moment from'moment';
  */
 export class CubeComponent implements AfterViewInit {
    // Canvases
-   @ViewChild('webGLCanvas') webGLContainer: ElementRef;
-   @ViewChild('cssCanvas') cssContainer: ElementRef;
+   @ViewChild('webGLCanvas', { static: true }) webGLContainer: ElementRef;
+   @ViewChild('cssCanvas', { static: true }) cssContainer: ElementRef;
 
    // spreadsheet input field
-   @ViewChild('spreadsheetInput') spreadsheetId: ElementRef;
+   @ViewChild('spreadsheetInput', { static: false }) spreadsheetId: ElementRef;
 
    // detail panel
-   @ViewChild('modal') modalContainer: ElementRef;
-   @ViewChild('img') imgContainer: ElementRef;
-   @ViewChild('caption') captionContainer: ElementRef;
+   @ViewChild('modal', { static: true }) modalContainer: ElementRef;
+   @ViewChild('img', { static: true }) imgContainer: ElementRef;
+   @ViewChild('caption', { static: true }) captionContainer: ElementRef;
    // toggle buttons for cubes
-   @ViewChild('geobtn') gBtn: ElementRef;
-   @ViewChild('setbtn') sBtn: ElementRef;
-   @ViewChild('netbtn') nBtn: ElementRef;
+   @ViewChild('geobtn', { static: true }) gBtn: ElementRef;
+   @ViewChild('setbtn', { static: true }) sBtn: ElementRef;
+   @ViewChild('netbtn', { static: true }) nBtn: ElementRef;
 
    // tooltip html element for d3
-   @ViewChild('tooltip') tooltip: ElementRef;
+   @ViewChild('tooltip', { static: true }) tooltip: ElementRef;
 
    title = 'PolyCube';
 
